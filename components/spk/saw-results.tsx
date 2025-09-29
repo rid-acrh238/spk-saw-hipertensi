@@ -107,7 +107,7 @@ export function SAWResults({ results }: { results: SAWComputation }) {
               <ChartTooltip content={<ChartTooltipContent />} />
               <Bar dataKey="score" fill="var(--chart-1)" radius={4} />
               {/* @ts-ignore */}
-              <ChartLegend content={<ChartLegendContent />} />
+              <ChartLegend content={(props) => <ChartLegendContent {...props} />} />
             </BarChart>
           </ChartContainer>
         </CardContent>

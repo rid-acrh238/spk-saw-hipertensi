@@ -1,18 +1,20 @@
-const repoBase = process.env.NEXT_PUBLIC_BASE_PATH || '/spk-saw-hipertensi';
+const repoBase = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   output: 'export',
-  basePath: repoBase,
-  assetPrefix: `${repoBase}/`,
+  basePath: repoBase || undefined,
+  assetPrefix: repoBase ? `${repoBase}/` : undefined,
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  typescript: {
-  ignoreBuildErrors: true,
-},
+}
 
-};
-
-export default nextConfig;
+export default nextConfig

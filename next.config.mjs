@@ -1,5 +1,4 @@
-const repoBase = process.env.NEXT_PUBLIC_BASE_PATH='/spk-saw-hipertensi pnpm build'
-
+const repoBase = process.env.NEXT_PUBLIC_BASE_PATH || 'spk-saw-hipertensi'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
